@@ -26,41 +26,18 @@
                 <a class="fa-share-alt" href="#share-menu">Share</a>
             </li>
             {{ end }}
-            <li>
-	 <a id="dark-mode-toggle" class="fal fa-moon-o">Dark Mode</a>
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL }}">
+                </form>
             </li>
             <li class="menu">
                 <a class="fa-bars" href="#menu">Menu</a>
             </li>
         </ul>
     </nav>
-
-	<script>
-var toggle = document.getElementById("dark-mode-toggle");
-var darkTheme = document.getElementById("dark-mode-theme");
-var savedTheme = localStorage.getItem("dark-mode-storage") || "light";
-setTheme(savedTheme);
-
-toggle.addEventListener("click", () => {
-    if (toggle.className === "fal fa-moon-o") {
-        setTheme("dark");
-    } else if (toggle.className === "fal fa-sun-o") {
-        setTheme("light");
-    }
-});
-
-function setTheme(mode) {
-	    localStorage.setItem("dark-mode-storage", mode);
-    if (mode === "dark") {
-        darkTheme.disabled = false;
-        toggle.className = "fal fa-sun-o";
-    } else if (mode === "light") {
-        darkTheme.disabled = true;
-        toggle.className = "fal fa-moon-o";
-    }
-}
-	</script>
-
 </header>
 
 <!-- Menu -->

@@ -208,6 +208,10 @@ is shown below:
 Please refer to _layouts/shortcodes/img-fit.html_ for more details on the function.
 
 Credit: [jpescador]
+---
+### dark theme
+
+Thanks to : [radu-matei](https://radu-matei.com)
 
 ---
 
